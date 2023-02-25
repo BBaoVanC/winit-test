@@ -10,7 +10,9 @@ fn main() {
     let window = WindowBuilder::new().with_title("bello").build(&event_loop).unwrap();
     event_loop.run(move |event, _, control_flow| {
         control_flow.set_wait();
-        let surface = window.wayland_surface().unwrap();
+        window.request_redraw();
+        panic!("akjsdfjkadsf");
+        #[allow(clippy::single_match)]
         match event {
             Event::WindowEvent {
                 event: WindowEvent::CloseRequested,
